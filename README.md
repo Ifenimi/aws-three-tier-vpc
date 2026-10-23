@@ -141,17 +141,3 @@ Separate private subnets provide network segmentation between the Application an
 The lab successfully demonstrated the core networking principles of a three-tier AWS architecture, including subnet segmentation, public and private routing, Bastion-based SSH access, security-group enforcement, and outbound internet access through a NAT Gateway.
 
 The architecture uses one NAT Gateway to reduce lab costs, so private-subnet internet egress is not fully resilient to an Availability Zone failure. The EC2 instances served as placeholders; no application or database software was deployed.
-
-## Cleanup
-
-To avoid ongoing AWS charges after the assignment is complete:
-
-1. Terminate the four EC2 instances.
-2. Delete the NAT Gateway and wait for deletion to complete.
-3. Release the Elastic IP allocated to the NAT Gateway.
-4. Remove subnet associations and delete the custom route tables where possible.
-5. Delete the six subnets.
-6. Detach and delete the Internet Gateway.
-7. Delete the VPC.
-
-Before deleting resources, ensure the required screenshots and other submission evidence have been saved.
